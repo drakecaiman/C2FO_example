@@ -1,27 +1,38 @@
-# Cf2o
+# C2FO
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
+This is simple video game library tracker exploring the use of patio, Node, and Angular
 
-## Development server
+## Instructions
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Click on the list item to view more details on a game item. Click the plus to add a new game item. Click the pencil to edit the currently displayed item. Click the cross to delete the current item.
 
-## Code scaffolding
+## Environment
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Tested with macOS 10.13.3
 
-## Build
+## Technology
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+- Patio v1.3.0
+- Angular v5.2.2
+- Node.js v5.6.0 for Patio, v9.5.0 for Angular (using NVM)
 
-## Running unit tests
+## Setup
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+From the project directory, run the following shell commands:
 
-## Running end-to-end tests
+- To setup the database and user:
+> `node setup.js`
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- To set up the tables:
+> `patio migrate -v --camelize -u "pg://test@127.0.0.1:5432/c2fo_duncan" -d ./migration`
 
-## Further help
+- To fill tables:
+> `node populate.js`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- To start API server:
+> `node api.js`
+
+- To start Angular server (in another process):
+> `ng serve --open`
+
+A website should open in your browser, if not, navigate to http://localhost:4200

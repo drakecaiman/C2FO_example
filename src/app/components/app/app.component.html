@@ -1,0 +1,5 @@
+<games-list [selectedGame]="currentGame" [games]="games" (selectGame)="setCurrentGame($event)"></games-list>
+<games-display [game]="currentGame"
+(gameRemoved)="removeCurrentGame($event)"
+(gameReverted)="revertCurrentGame($event)"
+(gameEdited)="saveCurrentGame($event)"></games-display>

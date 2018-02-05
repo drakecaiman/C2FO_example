@@ -1,0 +1,145 @@
+.display-empty
+{
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.display-full
+{
+	width: 100%;
+	height: 100%;
+
+	padding: 1em;
+
+	line-height: 1.5;
+}
+
+.display-edit
+{
+	width: 100%;
+	height: 100%;
+
+	padding: 1em;
+
+	line-height: 1.5;
+}
+
+.game-detail-name
+{
+	font-size: 3em;
+	font-weight: bold;
+}
+
+.game-detail-other
+{
+	font-size: 1.5em;
+}
+
+
+.game-detail-message
+{
+	color: gray;
+}
+
+.display-toolbar
+{
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.display-toolbar.editing
+{
+	visibility: hidden;
+}
+
+.game-detail-input[type="text"]
+{
+	height: 1em;
+	padding: 0.5em;
+	margin: 0.25em 0em;
+
+	font-size: 1em;
+
+	border: solid 1px gray;
+	border-radius: 4px;
+}
+
+.game-detail-input[disabled]
+{
+	border-color: transparent;
+}
+
+.game-detail-label
+{
+	display: inline-block;
+	height: 1em;
+	width: 5em;
+	padding: 0.5em;
+	margin: 0.25em 0em;
+
+	font-size: 1em;
+}
+
+.game-detail-input.header
+{
+	width: 20em;
+	margin: 0.25em 0em;
+	text-overflow: ellipsis;
+	padding: 0.5em 0.5em 0.5em 0.25em;
+	font-size: 2em;
+}
+
+.game-detail-button
+{
+	border-style: none;
+	width: 3em;
+	height: 3em;
+	margin: 0.5em;
+	padding: 0.25em;
+
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.game-detail-button.empty
+{
+	visibility: hidden;
+}
+
+.game-detail-button.edit
+{
+	background-image: url("/assets/pencil.png");
+}
+
+.game-detail-button.delete
+{
+	background-image: url("/assets/cross.png");
+}
+
+.game-detail-button.add
+{
+	background-image: url("/assets/plus.png");
+}
+
+.game-detail-button:active
+{
+	filter: invert(100%);
+}
+
+.push-button
+{
+	padding: 0.75em;
+
+	font-weight: bold;
+
+	border: solid 1px gray;
+	background: rgb(161, 219, 242);
+	color: white;
+}

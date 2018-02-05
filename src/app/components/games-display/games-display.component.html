@@ -1,0 +1,23 @@
+<div class="display-toolbar" [class.editing]="isEditing">
+	<button type="button" name="add" (click)="createGame()" class="game-detail-button add"></button>
+	<button type="button" name="delete" (click)="onDeleteGame(game)" class="game-detail-button delete" [class.empty]="!game"></button>
+	<button type="button" name="edit" (click)="toggleEditing()" class="game-detail-button edit" [class.empty]="!game"></button>
+</div>
+<div *ngIf="game; then content else empty"></div>
+<ng-template #content>
+	<div class="display-full">
+		<input class="game-detail-input header" type="text" placeholder="Name" [(ngModel)]="game.name" [attr.disabled]="isForEditing" /><br />
+		<label class="game-detail-label">System</label>
+		<input class="game-detail-input" type="text" placeholder="System" [(ngModel)]="game.system" [attr.disabled]="isForEditing" /><br />
+		<label class="game-detail-label">Genre</label>
+		<input class="game-detail-input" type="text" placeholder="Genre" [(ngModel)]="game.genre" [attr.disabled]="isForEditing" /><br />
+		<br />
+		<button type="button" name="cancel" class="push-button" (click)="onCancel()" [attr.hidden]="isForEditing">Cancel</button>
+		<button type="button" name="save" class="push-button" (click)="onSave(game)" [attr.hidden]="isForEditing">Save</button>
+	</div>
+</ng-template>
+<ng-template #empty>
+	<div class="display-empty">
+		<span class="game-detail-message">No game selected</span>
+	</div>
+</ng-template>

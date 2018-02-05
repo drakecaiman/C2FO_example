@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+html, body
+{
+	height: 100%;
+}
+
+body
+{
+	font-family: "Verdana";
+
+	margin: 0px;
+	padding: 0px;
+}
+
+app-root
+{
+	height: 100%;
+
+	display: flex;
+	flex-direction: row;
+
+	background-color: rgb(196, 196, 196);
+}
+
+app-root > *
+{
+	flex: 1 100%;
+}
+
+games-display
+{
+	background-color: white;
+}

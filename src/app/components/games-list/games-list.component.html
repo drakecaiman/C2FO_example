@@ -1,0 +1,6 @@
+<ul class="game-list" (click)="onSelectGame()">
+	<li *ngFor="let game of games" class="game-list-item" [class.selected]="game === selectedGame" stop-click-propagation (click)="onSelectGame(game)">
+		<span class="game-list-name">{{game.name}}</span><br />
+		<span class="game-list-description">{{game.system}}</span>
+	</li>
+</ul>
